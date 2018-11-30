@@ -3,3 +3,4 @@ github:
   branch: master
 name: Seth Gossage
 markdown: kramdown
+theme: jekyll-theme-minimal
