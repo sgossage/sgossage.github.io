@@ -11,16 +11,6 @@ title: Publications
             {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">
             {{ post.ref-authors}}, <b>{{ post.ref-title}}</b>, {{ post.ref-year}}, {{ post.ref-journal}},
             {{ post.ref-vol}}.</a>
-          <p>
-            {{ post.ref-title }}. 
-            <em>{{ post.ref-journal}}</em>
-            {% if post.ref-vol %}, {{ post.ref-vol }}{% endif %}. 
-            {% if post.ref-doi %}
-              <a href="http://dx.doi.org/{{ post.ref-doi }}">
-                doi: {{ post.ref-doi }}
-              </a>
-            {% endif %}
-          </p>
         </li>
       {% endif %}
     {% endfor %}
