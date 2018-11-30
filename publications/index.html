@@ -4,12 +4,13 @@ title: Publications
 ---
 <div class="publist">
   <ul>
-    {% for post in site.posts%}
+    {% for post in site.posts %}
       {% if post.work-type == 'Paper' %}
         <li>
           <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
             {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">
-            <h2>{{ post.ref-authors }} ({{ post.ref-year }}).</h2></a>
+            {{post.ref-authors}}, <h2>{{ post.ref-title}}</h2>, {{post.ref-year}}, {{post.ref-journal}},
+                {{post.ref-vol}}.</a>
           <p>
             {{ post.ref-title }}. 
             <em>{{ post.ref-journal}}</em>
