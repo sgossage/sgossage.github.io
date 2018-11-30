@@ -8,9 +8,9 @@ title: Publications
     {% for post in site.posts %}
       {% if post.work-type == 'Paper' %}
         <li>
-          {{ post.ref-authors}},<a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
-            {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">
-            ,{{ post.ref-title}}</a>,{{ post.ref-year}}, {{ post.ref-journal}}, {{ post.ref-vol}}.
+            <h3>{{ post.ref-authors}}, <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
+            {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.ref-title}}</a>, 
+            {{ post.ref-year}}, {{ post.ref-journal}}, {{ post.ref-vol}}.</h3>
         </li>
       {% endif %}
     {% endfor %}
