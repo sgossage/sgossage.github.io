@@ -1,7 +1,0 @@
-github:
-  repo: sgossage/sgossage.github.io
-  branch: master
-#url: "https://sgossage.github.io"
-name: Seth Gossage
-markdown: kramdown
-theme: jekyll-theme-minimal
