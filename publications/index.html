@@ -9,8 +9,8 @@ title: Publications
         <li>
           <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
             {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">
-            {{post.ref-authors}}, <h2>{{ post.ref-title}}</h2>, {{post.ref-year}}, {{post.ref-journal}},
-                {{post.ref-vol}}.</a>
+            {{ post.ref-authors}}, <b>{{ post.ref-title}}</b>, {{ post.ref-year}}, {{ post.ref-journal}},
+            {{ post.ref-vol}}.</a>
           <p>
             {{ post.ref-title }}. 
             <em>{{ post.ref-journal}}</em>
