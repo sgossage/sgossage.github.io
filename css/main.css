@@ -32,15 +32,15 @@ p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #ffffff;
-    float: right;
 }
 img {
     float:left;
+    margin-right: 10px;
+    clear:both;
 }
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
-    clear: both;
 }
 
 ul.posts { 
