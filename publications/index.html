@@ -7,7 +7,7 @@ title: Publications
   <ul>
     {% for post in site.posts %}
       {% if post.work-type == 'Paper' %}
-        <li>
+        <li style=" margin-bottom: 10px">
             <b>{{post.ref-firstauth}}</b>, {{ post.ref-coauthors}}, 
             <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
             {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.ref-title}}</a>, 
