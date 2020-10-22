@@ -4,6 +4,7 @@ title: Publications
 ---
 <h1>{{ page.title}}</h1>
 <div class="publist">
+  <h2>First Authored</h2>
   <ul>
     {% for post in site.posts %}
       {% if post.work-type == 'Paper' %}
@@ -14,9 +15,14 @@ title: Publications
             {{ post.ref-year}}, {{ post.ref-journal}}, {{ post.ref-vol}}.
         </li>
       {% endif %}
+    {% endfor %}
+  </ul>
+  <h2>Co-authored</h2>
+  <ul>  
+    {% for post in site.posts %}
       {% if post.work-type == 'a2Paper' %}
         <li style=" margin-bottom: 10px">
-            {{post.ref-firstauth}}, <b>{{ post.ref-secondauth}}<\b>, {{post.ref-thirdauth}}, {{ post.ref-coauthors}},
+            {{post.ref-firstauth}}, <b>{{ post.ref-secondauth}}</b>, {{post.ref-thirdauth}}, {{ post.ref-coauthors}},
             <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
             {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.ref-title}}</a>,
             {{ post.ref-year}}, {{ post.ref-journal}}, {{ post.ref-vol}}.
@@ -24,7 +30,7 @@ title: Publications
       {% endif %}
       {% if post.work-type == 'a3Paper' %}
         <li style=" margin-bottom: 10px">
-            {{post.ref-firstauth}}, {{ post.ref-secondauth}}, <b>{{post.ref-thirdauth}}<\b>, {{ post.ref-coauthors}},
+            {{post.ref-firstauth}}, {{ post.ref-secondauth}}, <b>{{post.ref-thirdauth}}</b>, {{ post.ref-coauthors}},
             <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
             {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.ref-title}}</a>,
             {{ post.ref-year}}, {{ post.ref-journal}}, {{ post.ref-vol}}.
