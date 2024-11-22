@@ -3,49 +3,16 @@ layout: default
 title: Publications
 ---
 <h1>{{ page.title}}</h1>
-<div class="publist">
-  <h2>First Authored</h2>
-  <ul>
-    {% for post in site.posts %}
-      {% if post.work-type == 'Paper' %}
-        <li style=" margin-bottom: 10px">
-            <b>{{post.ref-firstauth}}</b>, {{post.ref-secondauth}}, {{post.ref-thirdauth}}, {{ post.ref-coauthors}}, 
-            <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
-            {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.ref-title}}</a>, 
-            {{ post.ref-year}}, {{ post.ref-journal}}, {{ post.ref-vol}}.
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-  <h2>Co-authored</h2>
-  <ul>  
-    {% for post in site.posts %}
-      {% if post.work-type == 'a2Paper' %}
-        <li style=" margin-bottom: 10px">
-            {{post.ref-firstauth}}, <b>{{ post.ref-secondauth}}</b>, {{post.ref-thirdauth}}, {{ post.ref-coauthors}},
-            <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
-            {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.ref-title}}</a>,
-            {{ post.ref-year}}, {{ post.ref-journal}}, {{ post.ref-vol}}.
-        </li>
-      {% endif %}
-      {% if post.work-type == 'a3Paper' %}
-        <li style=" margin-bottom: 10px">
-            {{post.ref-firstauth}}, {{ post.ref-secondauth}}, <b>{{post.ref-thirdauth}}</b>, {{ post.ref-coauthors}},
-            <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
-            {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.ref-title}}</a>,
-            {{ post.ref-year}}, {{ post.ref-journal}}, {{ post.ref-vol}}.
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-  
-  <h2>ADS/arXiv Links</h2>
+  <h2>NASA ADS and arXiv Links</h2>
   <ul>
     <li style=" margin-bottom: 10px">
-    <a href=https://ui.adsabs.harvard.edu/search/q=author%3A(%22gossage%2C%20s.%22)%20AND%20pubdate%3A%5B2000-01%20TO%20*%5D%20keyword%3A(%22astrophysics%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0>ADS</a>
+      <a href=https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&p_=0&q=author%3A(%22%5Egossage%2C%20s.%22)%20AND%20pubdate%3A%5B2000-01%20TO%20*%5D%20keyword%3A(%22astrophysics%22)&sort=date%20desc%2C%20bibcode%20desc>ADS (first authored)</a>
+      </li>
+    <li style=" margin-bottom: 10px">
+    <a href=https://ui.adsabs.harvard.edu/search/q=author%3A(%22gossage%2C%20s.%22)%20AND%20pubdate%3A%5B2000-01%20TO%20*%5D%20keyword%3A(%22astrophysics%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0>ADS (all)</a>
     </li>
     <li style=" margin-bottom: 10px"> 
-    <a href=https://arxiv.org/find/astro-ph/1/au:+Gossage_S/0/1/0/all/0/1>arXiv</a>
+    <a href=https://arxiv.org/find/astro-ph/1/au:+Gossage_S/0/1/0/all/0/1>arXiv (all)</a>
     </li>
   </ul>
 
