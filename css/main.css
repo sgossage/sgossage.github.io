@@ -29,6 +29,7 @@ h1 {
     color: #ffffff;
 }
 p {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-size: 1.5em;
     line-height: 1.4em;
     color: #ffffff;
@@ -53,3 +54,5 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+.active {color: white}
